@@ -1,5 +1,9 @@
 body {
   margin: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: scroll;
+  scroll-snap-type: y mandatory;
 }
 
 html,
@@ -18,6 +22,7 @@ body {
   width: 100vw;
   min-height: 100vh;
   scroll-snap-align: start;
+  margin: auto;
 }
 
 h1 {
@@ -44,6 +49,18 @@ h4 {
   margin: 20px;
 }
 
+p {
+  margin: 20px;
+  background-color: #acc7eb;
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 18px;
+}
+
+#spacing2 {
+  margin: 10px 20px 10px 20px;
+}
+
 ul {
   margin: 20px;
   background-color: #acc7eb;
@@ -57,20 +74,45 @@ li {
 
 a {
   color: black;
-  font-size: 16px;
+  font-size: 18px;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
 }
 
 #start {
   margin: 20px;
 }
 
+#back {
+  margin: 20px;
+}
+.red {
+  /* color: #555555; */
+  background-color: #555555;
+}
+.green {
+  /* color: #00aa00; */
+  background-color: #00aa00;
+}
+.blue {
+  /* color: #3679d5; */
+  background-color: #3679d5;
+  /* background-color: #000000; */
+}
+
 button {
   height: 40px;
   width: 60px;
   color: #ffffff;
-  background: #3679d5;
+  background-color: #3679d5;
   margin: 10px;
   border-radius: 8px;
+}
+
+button:hover {
+  box-shadow: 0 0 15px 0 rgba(0, 0, 100, 0.78);
 }
 
 section.grid-4 {
@@ -93,38 +135,46 @@ section.grid-4 {
 @media (min-width: 960px) {
   h1 {
     color: #3679d5;
-    font-size: 100px;
-    margin-left: 40px;
+    font-size: 80px;
+    margin: 40px 0 0 40px;
   }
   h2 {
     color: #3679d5;
-    font-size: 70px;
+    font-size: 60px;
     margin: 40px;
   }
   h3 {
     color: #8ab1e5;
-    font-size: 50px;
-    margin: 40px;
-  }
-  #spacing {
-    margin: 0 0 0 40px;
-  }
-  #start {
+    font-size: 40px;
     margin: 40px;
   }
   h4 {
     color: #000000;
-    font-size: 40px;
-    margin: 40px;
+    font-size: 30px;
+    margin: 20px 40px 20px 40px;
+  }
+  p {
+    font-size: 20px;
+    margin: 20px 40px 20px 40px;
+    padding: 30px;
+  }
+  #spacing {
+    margin: 0 40px 20px 40px;
+  }
+  #spacing2 {
+    margin: 20px 40px 20px 40px;
+  }
+  #spacing3 {
+    margin: 40px 40px 20px 40px;
   }
   a {
     color: black;
-    font-size: 25px;
+    font-size: 20px;
   }
   ul {
-    margin: 40px;
+    margin: 20px 40px 20px 40px;
     background-color: #acc7eb;
-    padding: 20px;
+    padding: 30px;
     border-radius: 10px;
   }
   li {
@@ -139,19 +189,19 @@ section.grid-4 {
     grid-template-columns: 1fr 1fr 1fr;
   }
   .slides > div {
-    width: 30vw;
+    width: 33vw;
     min-height: 100vh;
   }
   #start {
     display: none;
   }
-}
-
-body {
-  width: 100vw;
-  height: 100vh;
-  overflow: scroll;
-  scroll-snap-type: y mandatory;
+  #back {
+    display: none;
+  }
+  .buttonGrid {
+    justify-content: left;
+    margin-left: 32px;
+  }
 }
 
 button {
@@ -166,14 +216,4 @@ button {
   font-size: 24px;
   color: #ffffff;
   font-weight: bold;
-}
-
-.red {
-  background-color: #ff0000;
-}
-.green {
-  background-color: #00aa00;
-}
-.blue {
-  background-color: #3679d5;
 }
