@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/queer-hack-2020/static/css/main.e0b53108.chunk.css",
+    "main.js": "/queer-hack-2020/static/js/main.33c0ea95.chunk.js",
+    "main.js.map": "/queer-hack-2020/static/js/main.33c0ea95.chunk.js.map",
+    "runtime-main.js": "/queer-hack-2020/static/js/runtime-main.f00e92b4.js",
+    "runtime-main.js.map": "/queer-hack-2020/static/js/runtime-main.f00e92b4.js.map",
+    "static/js/2.42d45a98.chunk.js": "/queer-hack-2020/static/js/2.42d45a98.chunk.js",
+    "static/js/2.42d45a98.chunk.js.map": "/queer-hack-2020/static/js/2.42d45a98.chunk.js.map",
+    "index.html": "/queer-hack-2020/index.html",
+    "static/css/main.e0b53108.chunk.css.map": "/queer-hack-2020/static/css/main.e0b53108.chunk.css.map",
+    "static/js/2.42d45a98.chunk.js.LICENSE.txt": "/queer-hack-2020/static/js/2.42d45a98.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f00e92b4.js",
+    "static/js/2.42d45a98.chunk.js",
+    "static/css/main.e0b53108.chunk.css",
+    "static/js/main.33c0ea95.chunk.js"
+  ]
+}
