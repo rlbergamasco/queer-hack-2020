@@ -20,12 +20,11 @@ ul {
 
 button {
   height: 40px;
-  width: 40px;
-  color: #000;
-  background: #abf;
+  width: 60px;
+  color: #ffffff;
+  background: #3679d5;
   margin: 10px;
-  border: #55f;
-  border-width: 3px;
+  border-radius: 8px;
 }
 
 .square {
