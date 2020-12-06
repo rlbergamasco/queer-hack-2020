@@ -131,9 +131,8 @@ function App() {
     return (        
         <div className="slides">
             <div id="intro">
-                <h1>U.S.</h1>
-                <h2 id="spacing">Healthcare:</h2>
-                <h3 id="spacing2">What it really costs</h3>
+                <h2 id="spacing">That costs what?</h2>
+                <h3 id="spacing2">Healthcare Trivia Game</h3>
                 <p>Test your knowledge and see how healthcare prices in the United States compare to other countries.</p>
                 <button className="blue" id="start" onClick={()=>document.getElementById('question').scrollIntoView()}>Start</button>
             </div>
