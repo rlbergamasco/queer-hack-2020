@@ -10,6 +10,7 @@ function Popup() {
 
     const [displayType, setDisplay] = useState("none");
     const [text, setText] = useState("Try again!")
+    
 
     return (
         <div id="pop" className="modal">

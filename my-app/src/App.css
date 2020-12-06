@@ -22,17 +22,23 @@ body {
 
 h1 {
   color: #3679d5;
-  font-size: 50px;
-  margin: 20px;
+  font-size: 60px;
+  margin: 20px 0 0 20px;
 }
 
 h2 {
+  color: #3679d5;
+  font-size: 50px;
+  margin: 0 0 0 20px;
+}
+
+h3 {
   color: #8ab1e5;
   font-size: 40px;
   margin: 20px;
 }
 
-h3 {
+h4 {
   color: #000000;
   font-size: 24px;
   margin: 20px;
@@ -78,21 +84,35 @@ section.grid-4 {
   background-color: #8ab1e5;
 }
 
-@media (min-width: 768px) {
+.buttonGrid {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+@media (min-width: 960px) {
   h1 {
     color: #3679d5;
-    font-size: 90px;
-    margin: 40px;
+    font-size: 100px;
+    margin-left: 40px;
   }
   h2 {
-    color: #8ab1e5;
+    color: #3679d5;
     font-size: 70px;
     margin: 40px;
+  }
+  h3 {
+    color: #8ab1e5;
+    font-size: 50px;
+    margin: 40px;
+  }
+  #spacing {
+    margin: 0 0 0 40px;
   }
   #start {
     margin: 40px;
   }
-  h3 {
+  h4 {
     color: #000000;
     font-size: 40px;
     margin: 40px;
@@ -110,6 +130,21 @@ section.grid-4 {
   li {
     margin-left: 14px;
   }
+  /* .slides {
+    display: flex;
+    align-items: center;
+  } */
+  .slides {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .slides > div {
+    width: 30vw;
+    min-height: 100vh;
+  }
+  #start {
+    display: none;
+  }
 }
 
 body {
@@ -122,7 +157,7 @@ body {
 button {
   height: 60px;
   width: 150px;
-  background-color: #3679d5;
+  /* background-color: #3679d5; */
   border-radius: 10px;
   display: flex;
   justify-content: center;
@@ -131,4 +166,14 @@ button {
   font-size: 24px;
   color: #ffffff;
   font-weight: bold;
+}
+
+.red {
+  background-color: #ff0000;
+}
+.green {
+  background-color: #00aa00;
+}
+.blue {
+  background-color: #3679d5;
 }

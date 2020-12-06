@@ -39,6 +39,9 @@ function App() {
      */
     let [qNum, setQNum] = useState(0);
     let [state, setState] = useState(false);
+    const [isBlue, setBlue] = useState(true);
+    const [isRed, setRed] = useState(false);
+    const [isGreen, setGreen] = useState(false);
 
     /**
      * Hook to increment qNum by 1,
@@ -90,37 +93,40 @@ function App() {
     return (        
         <div className="slides">
             <div id="intro">
-                <h1>US Healthcare:</h1>
-                <h2>What it really costs</h2>
-                <button id="start" onClick={()=>document.getElementById('question').scrollIntoView()}>START</button>
+                <h1>U.S.</h1>
+                <h2 id="spacing">Healthcare:</h2>
+                <h3>What it really costs</h3>
+                <button className="blue" id="start" onClick={()=>document.getElementById('question').scrollIntoView()}>START</button>
             </div>
             <div id="question">
                 
-                <h2>{questions[qNum].question}</h2>
-                <section className="grid-4">
-                <button onClick={()=>popAnswer(1)}> {questions[qNum].answer0}</button>
-                <button onClick={()=>popAnswer(2)}> {questions[qNum].answer1}</button>
-                <button onClick={()=>popAnswer(3)}> {questions[qNum].answer2}</button>
-                <button onClick={()=>popAnswer(4)}> {questions[qNum].answer3}</button>
-                <button class="change" onClick={previousQ}>Back</button>
-                <button class="change" onClick={nextQ}>Next</button>
-                <Popup pop={popAnswer}/>
-                <div>
-                {/* <div className="btn" onClick={this.togglePop}>
-                <button>New User?</button>
-                </div> */}
-                {state ? <Popup toggle={togglePop} /> : null}
-                </div>
+                <h3>{questions[qNum].question}</h3>
+                <section className="buttonGrid">
+                    <section className="grid-4">
+                    <button className={isRed ? "red" : "blue"} onClick={()=>popAnswer(1)}> {questions[qNum].answer0}</button>
+                    <button onClick={()=>popAnswer(2)}> {questions[qNum].answer1}</button>
+                    <button onClick={()=>popAnswer(3)}> {questions[qNum].answer2}</button>
+                    <button onClick={()=>popAnswer(4)}> {questions[qNum].answer3}</button>
+                    <button class="change" onClick={previousQ}>Back</button>
+                    <button class="change" onClick={nextQ}>Next</button>
+                    <Popup pop={popAnswer}/>
+                    <div>
+                    {/* <div className="btn" onClick={this.togglePop}>
+                    <button>New User?</button>
+                    </div> */}
+                    {state ? <Popup toggle={togglePop} /> : null}
+                    </div>
+                    </section>
                 </section>
             </div>
             <div id="conclusion">
-                <h1>Conclusion</h1>
-                <h3>For more information, check out these links:</h3>
+                <h2>Conclusion</h2>
+                <h4>For more information, check out these links:</h4>
                 <ul>
-                    <li><a href="https://www.forbes.com/sites/nextavenue/2019/10/25/what-broke-american-health-care-and-how-to-fix-it/?sh=57aebd5147ed">What Broke American Health Care And How To Fix It</a> 
-                    </li>
-                    <li><a href="https://www.pgpf.org/blog/2020/07/how-does-the-us-healthcare-system-compare-to-other-countries">How Does The U.S. Healthcare System Compare To Other Countries?</a></li>
-                    
+                    <li><a href="https://www.forbes.com/sites/nextavenue/2019/10/25/what-broke-american-health-care-and-how-to-fix-it/?sh=57aebd5147ed">Forbes: What Broke American Health Care And How To Fix It</a></li>
+                    <li><a href="https://www.pgpf.org/blog/2020/07/how-does-the-us-healthcare-system-compare-to-other-countries">PGPF: How Does The U.S. Healthcare System Compare To Other Countries?</a></li>
+                    <li><a href="https://data.oecd.org/healthres/pharmaceutical-spending.htm#indicator-chart">OECD: Global Pharmaceutical Spending Chart</a></li>
+                    <li><a href="https://www.bbc.com/news/world-us-canada-47491964">BBC: The Human Cost of Insulin in America</a></li>
                 </ul>
                 
             </div>
